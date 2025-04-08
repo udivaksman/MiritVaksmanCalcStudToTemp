@@ -32,12 +32,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 50px;
-            color: rgba(0, 0, 0, 0.05);
+            font-size: 60px;
+            color: rgba(0, 0, 0, 0.1); /* הגדלת האטימות לראות טוב יותר */
             transform: rotate(-45deg);
             pointer-events: none;
-            z-index: 0;
+            z-index: 1; /* שם את הסימן מים מעל לרוב התוכן */
             font-weight: bold;
+            user-select: none; /* מונע בחירת הטקסט */
         }
         
         h1 {
@@ -45,7 +46,7 @@
             color: #2c3e50;
             margin-bottom: 10px;
             position: relative;
-            z-index: 1;
+            z-index: 2; /* מעל סימן המים */
         }
         
         .subtitle {
@@ -55,13 +56,16 @@
             margin-bottom: 30px;
             font-size: 18px;
             position: relative;
-            z-index: 1;
+            z-index: 2; /* מעל סימן המים */
         }
         
         .input-group {
             margin-bottom: 15px;
             position: relative;
-            z-index: 1;
+            z-index: 2; /* מעל סימן המים */
+            background-color: rgba(255, 255, 255, 0.8); /* רקע קל כדי לשפר את הקריאות */
+            padding: 5px;
+            border-radius: 5px;
         }
         
         label {
@@ -77,6 +81,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 16px;
+            background-color: white;
         }
         
         button {
@@ -92,7 +97,7 @@
             margin: 25px 0;
             transition: background-color 0.3s;
             position: relative;
-            z-index: 1;
+            z-index: 2; /* מעל סימן המים */
         }
         
         button:hover {
@@ -102,11 +107,11 @@
         .results {
             margin-top: 30px;
             padding: 20px;
-            background-color: #f8f9fa;
+            background-color: rgba(248, 249, 250, 0.9); /* צבע רקע עם שקיפות קלה */
             border-radius: 5px;
             border-right: 5px solid #3498db;
             position: relative;
-            z-index: 1;
+            z-index: 2; /* מעל סימן המים */
         }
         
         .results-section {
@@ -148,7 +153,7 @@
             }
             
             .watermark {
-                font-size: 30px;
+                font-size: 40px;
             }
         }
     </style>
